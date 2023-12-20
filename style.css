@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #8CC461;
+}
+
+.score-con {
+    border: 3px solid white;
+    border-radius: 13px;
+    margin: 2rem auto;
+    width: 60%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.score-con>.description>p {
+    font-size: 35px;
+    color: white;
+    letter-spacing: 2;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 25px;
+}
+
+.score>div {
+    width: 6.8rem;
+    height: 6.8rem;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.score>div>p {
+    color: #656565;
+    font-size: 17px;
+    padding: 10p;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.game {
+    position: relative;
+    width: 30rem;
+    height: 20rem;
+    margin: 5rem auto;
+
+}
+
+.rock {
+    border: 15px solid #0074B6;
+    position: absolute;
+    left: 47px;
+}
+
+.scissor {
+    border: 15px solid #BD00FF;
+    position: absolute;
+    top: 3px;
+    right: 57px
+}
+
+.paper {
+    border: 15px solid #FFA943;
+    position: absolute;
+    bottom: 10px;
+    left: 170px
+}
+
+.game>div:nth-child(-n+3) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: -1px 1px 11px 0px #00000059;
+
+}
+
+.line1 {
+    position: absolute;
+    top: 53px;
+    left: 167px;
+    z-index: -1;
+}
+
+.line2 {
+    position: absolute;
+    top: 108px;
+    right: 146px;
+    z-index: -1;
+}
+
+.line3 {
+    position: absolute;
+    top: 108px;
+    left: 129px;
+    z-index: -1;
+}
+
+.rules-pop {
+    position: absolute;
+    border: 5px solid white;
+    top: 17rem;
+    right: 60px;
+    width: 18rem;
+    height: auto;
+    padding: 30px;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #004429;
+    color: white;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    border-radius: 14px;
+    display: none;
+}
+
+.rules-pop ul li::before {}
+
+.btn {
+    float: right;
+    margin-right: 50px;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    letter-spacing: 3px;
+    margin-top: -15px;
+    background-color: #8CC461;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cross {
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 12px;
+    font-size: 48px;
+    color: white;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    cursor: pointer;
+    position: absolute;
+    top: -33px;
+    right: -29px
+}
+
+.modals {
+    height: 7rem;
+    width: 10rem;
+    columns: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    display: none;
+}
+
+.modals h2 {
+    letter-spacing: 2px;
+
+}
+
+.btns {
+
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    letter-spacing: 3px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.choose{
+    margin: auto;
+    width: 43rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    
+}
