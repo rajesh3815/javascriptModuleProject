@@ -29,29 +29,22 @@
             </div>
         </div>
     </div>
-    <div class="di">
-        <p>you picked</p>
-        <p>computer picked</p>
-
-    </div>
     <div class="game">
-        <div class="rock">
+        <div class="rock user" data-choice="rock">
             <div class="rockimg">
                 <img src="image/rock.png" alt="rock">
             </div>
         </div>
-        <div class="paper">
+        <div class="paper user" data-choice="paper">
             <div class="paper-img">
                 <img src="image/paper.png" alt="paper">
             </div>
         </div>
-        <div class="scissor">
+        <div class="scissor user" data-choice="scissor">
             <div class="scissor-img">
-                <img src="image/secior.png" alt="scissor">
+                <img src="image/scissor.png" alt="scissor">
             </div>
         </div>
-
-
         <div class="line1">
             <img src="image/Line 1.png" alt="">
         </div>
@@ -61,6 +54,13 @@
         <div class="line3">
             <img src="image/Line 3.png" alt="">
         </div>
+    </div>
+    <div class="results hide">
+        <h3 class="res-heading">you picked</h3>
+        <h3 class="res-heading">computer picked</h3>
+        <div class="res_div"></div>
+        <div class="res_div"></div>
+
     </div>
     <div class="rules-pop">
         <h2>Game Rules</h2>
@@ -78,7 +78,7 @@
 
     </div>
     <button class="btn">RULES</button>
-
+    <!-- result modals -->
     <div class="won modals">
         <h2>YOU WIN</h2>
         <h3>AGAINST PC</h3>
