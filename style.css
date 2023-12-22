@@ -65,37 +65,44 @@ body {
     margin: 5rem auto;
 
 }
-.results{
+
+.results {
     display: grid;
-    grid-template-columns: repeat(2 ,1fr);
+    grid-template-columns: repeat(2, 1fr);
     place-items: center;
     color: white;
-    grid-template-areas: 
-    "your-head  computer-head"
-    "you-picked  computer-picked";
+    grid-template-areas:
+        "your-head  computer-head"
+        "you-picked  computer-picked";
     max-width: 1000px;
     margin: 0 auto;
 }
-.res-heading{
+
+.res-heading {
     font-size: 1.5em;
     letter-spacing: 1.5px;
     padding: 4rem 0 8rem;
 }
-.res-div{
+
+.res-div {
     min-width: 10rem;
     min-height: 10rem;
 }
-.res-heading:first-of-type{
-    grid-area:your-head;
+
+.res-heading:first-of-type {
+    grid-area: your-head;
 }
-.res-heading:last-of-type{
-  grid-area: computer-head;
+
+.res-heading:last-of-type {
+    grid-area: computer-head;
 }
-.res-div:first-of-type{
-    grid-area: you-picked ;
+
+.res-div:first-of-type {
+    grid-area: you-picked;
 }
-.res-div:last-of-type{
-    grid-area:computer-picked ;
+
+.res-div:last-of-type {
+    grid-area: computer-picked;
 }
 
 .rock {
@@ -117,14 +124,17 @@ body {
     bottom: 10px;
     left: 170px
 }
-.rock-res{
+
+.rock-res {
     border: 15px solid #0074B6;
 }
-.paper-res{
+
+.paper-res {
     border: 15px solid #FFA943;
-    
+
 }
-.scissor-res{
+
+.scissor-res {
     border: 15px solid #BD00FF;
 }
 
@@ -195,12 +205,19 @@ body {
     color: white;
     font-size: 17px;
     font-weight: 600;
+    width: 8rem;
     cursor: pointer;
+}
+.btn-postion{
     position: fixed;
     bottom: 10px;
-    right: 20px 
+    right: 20px;
 }
-
+.btn-win-postion{
+    position: fixed;
+    bottom: 10px;
+    right: 12rem;
+}
 .cross {
     border: 4px solid rgb(255, 255, 255);
     border-radius: 50%;
@@ -229,12 +246,11 @@ body {
     flex-direction: column;
     gap: 10px;
     color: white;
-    display: none;
+    margin: 0 auto;
 }
 
 .modals h2 {
     letter-spacing: 2px;
-
 }
 
 .btns {
@@ -250,9 +266,18 @@ body {
     cursor: pointer;
 }
 
-.user-display{
+.user-display {
     display: block;
 }
-.hide{
+
+.hide {
     display: none;
+}
+.celebrate{
+    width: max-content;
+    height: max-content;
+}
+.anchors{
+    text-decoration: none;
+    color: white;
 }

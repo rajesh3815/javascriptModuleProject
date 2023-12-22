@@ -20,16 +20,16 @@
             <div class="comp-score">
                 <p>COMPUTER</p>
                 <p> SCORE</p>
-                <p style="color: black; font-size:65px; font-weight: bolder;">0</p>
+                <p class="c-score" style="color: black; font-size:65px; font-weight: bolder;">0</p>
             </div>
             <div class="user-score">
                 <p>YOUR </p>
                 <p>SCORE</p>
-                <p style="color: black; font-size: 65px; font-weight: bolder;">0</p>
+                <p class="u-score" style="color: black; font-size: 65px; font-weight: bolder;">0</p>
             </div>
         </div>
     </div>
-    <div class="game">
+    <div class="game ">
         <div class="rock user" data-choice="rock">
             <div class="rockimg">
                 <img src="image/rock.png" alt="rock">
@@ -59,6 +59,7 @@
         <h3 class="res-heading">you picked</h3>
         <h3 class="res-heading">computer picked</h3>
         <div class="res_div"></div>
+        <!-- <div class="res-cards"></div> trying new thing grids -->
         <div class="res_div"></div>
 
     </div>
@@ -77,21 +78,23 @@
         </ul>
 
     </div>
-    <button class="btn">RULES</button>
+    <button class="btn btn-postion rule-btn">RULES</button>
+        <button class="btn hide win-btn"><a class="anchors" href="wins.html" target="_self">NEXT</a></button>
+
     <!-- result modals -->
-    <div class="won modals">
+    <div class="won modals hide">
         <h2>YOU WIN</h2>
         <h3>AGAINST PC</h3>
-        <button class="btns">PLAY AGAIN</button>
+        <button class="btns card-btn">PLAY AGAIN</button>
     </div>
-    <div class="lose modals" modals>
+    <div class="loose modals hide" modals>
         <h2>YOU LOST</h2>
         <h3>AGAINST PC</h3>
-        <button class="btns">PLAY AGAIN</button>
+        <button class="btns card-btn">PLAY AGAIN</button>
     </div>
-    <div class="tie modals" modals>
+    <div class="tie modals hide" modals>
         <h2>TIE UP</h2>
-        <button class="btns">REPLAY</button>
+        <button class="btns card-btn">REPLAY</button>
     </div>
 
     <script src="index.js"></script>

@@ -7,7 +7,24 @@ const game = document.querySelector('.game')
 const result = document.querySelector('.results')
 const res_divs = document.querySelectorAll('.res_div')
 
+const user_score_card = document.querySelector('.u-score')
+const computer_score_card = document.querySelector('.c-score')
+
+const win_card = document.querySelector('.won')
+const tie_card = document.querySelector('.tie')
+const loose_card = document.querySelector('.loose')
+const card_buttons = document.querySelectorAll('.card-btn')
+const cards = document.querySelectorAll('.modals')
+
+const win_btn = document.querySelector('.win-btn')
+const rule_btn = document.querySelector('.rule-btn')
+
 const data_choice = ["rock", "paper", "scissor"]
+//localstorages
+// localStorage.setItem("countWin",0)
+// localStorage.setItem("countLoss",0)
+// localStorage.clear()
+// const resCard = document.querySelector('.res-card')trying new thing grids
 
 button.addEventListener("click", () => {
     pop_up.style.display = "block"
@@ -19,7 +36,7 @@ close_popup.addEventListener("click", () => {
 // results displaying
 users.forEach((el, index) => {
     el.addEventListener("click", (e) => {
-        game.style.display = "none"
+        game.classList.toggle('hide')
         const choiceName = el.dataset.choice
         choose(choiceName);
     })
@@ -27,6 +44,7 @@ users.forEach((el, index) => {
 function choose(choice) {
     const computer_pick = computer_p()
     displayResults([choice, computer_pick])
+    countResult([choice, computer_pick])
 }
 function computer_p() {
     const rand_value = Math.floor(Math.random() * 3);
@@ -37,8 +55,49 @@ function displayResults(values) {
         setTimeout(() => {
 
             divs.innerHTML = `<div class="user ${values[idx]}-res"> <img src="image/${values[idx]}.png" alt="${values[idx]}"></div>`
-            
+
         }, 1000 * idx)
     })
     result.classList.toggle('hide')
 }
+function countResult(values) {
+    if (values[0] === values[1]) {
+        tie_card.classList.toggle('hide')
+    }
+    else if ((values[0] === 'rock' && values[1] === 'scissor') ||
+        (values[0] === 'scissor' && values[1] === 'paper') ||
+        (values[0] === 'paper' && values[1] === 'rock')) {
+         let c=Number(localStorage.getItem('countWin'))+1;
+         localStorage.setItem("countWin",c)
+        user_score_card.textContent =localStorage.getItem('countWin');
+        win_card.classList.toggle('hide')
+        // resCard.innerHTML = win_card trying new thing grids
+           celebrating()
+
+        // console.log(win_card)
+    } else {
+        loose_card.classList.toggle('hide')
+
+        let c=Number(localStorage.getItem('countLoss'))+1;
+        localStorage.setItem("countLoss",c)
+        computer_score_card.innerHTML = localStorage.getItem('countLoss');
+
+        // console.log(loose_card)
+    }
+}
+console.log(localStorage.getItem('countLoss'))
+function celebrating(){
+    rule_btn.classList.toggle('btn-postion')
+    rule_btn.classList.add('btn-win-postion')
+    win_btn.classList.toggle('hide')
+    win_btn.classList.add('btn-postion')
+}
+
+card_buttons.forEach((ele, idx) => {
+    ele.addEventListener('click', () => {
+        game.classList.toggle('hide')
+        result.classList.toggle('hide')
+        cards.forEach(card => card.classList.toggle('.hide'))
+    })
+
+})
