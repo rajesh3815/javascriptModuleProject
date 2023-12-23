@@ -58,9 +58,9 @@
     <div class="results hide">
         <h3 class="res-heading">you picked</h3>
         <h3 class="res-heading">computer picked</h3>
-        <div class="res_div"></div>
+        <div class="res_div" data-res="user"></div>
         <!-- <div class="res-cards"></div> trying new thing grids -->
-        <div class="res_div"></div>
+        <div class="res_div" data-res="computer"></div>
 
     </div>
     <div class="rules-pop">
@@ -79,7 +79,7 @@
 
     </div>
     <button class="btn btn-postion rule-btn">RULES</button>
-        <button class="btn hide win-btn"><a class="anchors" href="wins.html" target="_self">NEXT</a></button>
+        <button class="btn hide win-btn" onclick="navigateToLink('wins.html')"><a class="anchors" href="wins.html" target="_self">NEXT</a></button>
 
     <!-- result modals -->
     <div class="won modals hide">
