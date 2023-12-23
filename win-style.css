@@ -51,3 +51,7 @@ body{
     letter-spacing: 1px;
     font-size: 37px;
 }
+.btn a{
+    color: black;
+    text-decoration: none;
+}
